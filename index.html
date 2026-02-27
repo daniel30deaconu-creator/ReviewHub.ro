@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewHub.ro | Recenzii & Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">ReviewHub<span>.ro</span></div>
+    <div class="menu">
+        <a href="#">Noutăți</a>
+        <a href="#">Tehnologie</a>
+        <a href="#">Ghiduri</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="product-card" onclick="toggleDetails(this)">
+        <div class="close-btn">&times;</div>
+        
+        <div class="main-view">
+            <span class="id-badge">#1</span>
+            <img src="URL_POZA_PRINCIPALA" alt="Produs" class="prod-img">
+            <h3>Aspirator Vertical Pro</h3>
+            <p>Cel mai bun raport calitate-preț în 2026.</p>
+            <a href="LINK_AFFILIATE" target="_blank" class="buy-btn" onclick="event.stopPropagation();">VEZI PE AMAZON</a>
+        </div>
+
+        <div class="extra-details">
+            <hr>
+            <h4>Galerie Foto & Video</h4>
+            <div class="gallery">
+                <img src="URL_POZA_2" alt="Detalii">
+                <img src="URL_POZA_3" alt="Detalii">
+            </div>
+            <div class="video-box">
+                <iframe src="URL_VIDEO_EMBED" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Aici poți scrie recenzia ta amplă despre tehnologie sau specificații.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleDetails(card) {
+    card.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
