@@ -1,55 +1,45 @@
+/* Configurații de bază */
 :root {
-    --primary: #007bff; /* Albastru ReviewHub */
     --amazon: #ff9900;
+    --primary: #007bff;
     --dark: #1a1a1a;
-    --bg: #f0f2f5;
+    --light-bg: #f4f7f6;
 }
 
-body { font-family: 'Inter', sans-serif; margin: 0; background: var(--bg); color: #333; }
+body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background-color: var(--light-bg); color: #333; line-height: 1.6; }
 
-/* Navigație Modernă */
-nav { 
-    background: white; padding: 1rem; position: sticky; top: 0; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; 
-    justify-content: space-between; align-items: center; z-index: 1000;
-}
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--dark); text-decoration: none; }
+/* Navigație */
+nav { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: var(--dark); }
 .logo span { color: var(--amazon); }
-.nav-links a { text-decoration: none; color: var(--dark); margin-left: 15px; font-weight: 600; font-size: 0.9rem; }
+.nav-links a { text-decoration: none; color: var(--dark); margin-left: 20px; font-weight: 600; transition: 0.3s; }
+.nav-links a:hover { color: var(--amazon); }
 
-/* Hero Section */
-.hero { background: var(--dark); color: white; text-align: center; padding: 50px 20px; }
+/* Header Hero */
+.hero { background: var(--dark); color: white; text-align: center; padding: 60px 20px; }
 
-/* Grid și Carduri */
-.container { max-width: 700px; margin: 20px auto; padding: 0 15px; }
+/* Container General */
+.container { max-width: 800px; margin: 30px auto; padding: 0 15px; }
 
-.card { 
-    background: white; border-radius: 15px; margin-bottom: 25px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; 
-    transition: 0.3s; cursor: pointer; position: relative;
-}
+/* Card Produs (index.html) */
+.card { background: white; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: 0.3s; cursor: pointer; position: relative; }
+.card-header { padding: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #eee; }
+.prod-id { background: var(--amazon); color: white; padding: 3px 10px; border-radius: 5px; font-weight: bold; font-size: 0.9rem; }
+.main-img { width: 100%; height: auto; display: block; max-height: 400px; object-fit: contain; background: white; }
 
-.card-header { padding: 15px; display: flex; align-items: center; gap: 10px; }
-.prod-id { background: var(--amazon); color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+/* Buton Amazon - Mare și Clar */
+.btn-amazon { display: block; background: var(--amazon); color: white; text-align: center; padding: 18px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s; }
+.btn-amazon:hover { background: #e68a00; }
 
-.main-img { width: 100%; height: auto; display: block; }
-
-/* Butonul de Conversie - MARE și Portocaliu */
-.btn-amazon { 
-    display: block; background: var(--amazon); color: white; text-align: center; 
-    padding: 18px; text-decoration: none; font-weight: bold; font-size: 1.2rem;
-    border-top: 1px solid #eee;
-}
-
-/* Secțiunea Detalii (Ascunsă inițial) */
-.details { display: none; padding: 20px; background: #fafafa; border-top: 1px solid #eee; }
+/* Detalii Extinse */
+.details { display: none; padding: 25px; background: #fafafa; border-top: 1px solid #eee; }
 .card.active .details { display: block; }
-
-.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 15px 0; }
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
 .gallery img { width: 100%; border-radius: 8px; border: 1px solid #ddd; }
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 20px 0; border-radius: 10px; overflow: hidden; background: #000; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 15px 0; }
-.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
-
-.close-x { display: none; position: absolute; top: 10px; right: 15px; font-size: 1.5rem; font-weight: bold; }
-.card.active .close-x { display: block; }
+/* Stiluri Blog (blog.html) */
+.blog-post { background: white; border-radius: 15px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.blog-post h2 { margin-top: 0; color: var(--dark); }
+.badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.8rem; text-transform: uppercase; }
