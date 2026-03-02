@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewHub.ro | Produse</title>
+    <title>ReviewHub.ro | Kenmore Intuition Review</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adăugăm câteva stiluri extra pentru listă direct aici */
+        .specs-list { text-align: left; margin: 15px 0; font-size: 0.9rem; color: #444; }
+        .specs-list li { margin-bottom: 8px; list-style: none; display: flex; align-items: flex-start; }
+        .specs-list li::before { content: "✅"; margin-right: 10px; }
+        .tag { background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; }
+    </style>
 </head>
 <body>
 
@@ -16,37 +23,38 @@
     </div>
 </nav>
 
-<div class="hero">
-    <h1>ReviewHub.ro</h1>
-    <p>Produsele din clipurile TikTok - Testate și Verificate.</p>
-</div>
-
 <div class="container">
-    <div class="card" onclick="this.classList.toggle('active')">
+    <div class="card">
         <div class="card-header">
-            <span class="prod-id">#1</span>
-            <h3>Aspirator Vertical Wireless</h3>
+            <span class="tag">RECOMANDAT PENTRU ANIMALE</span>
+            <h3>Kenmore Intuition - Aspirator Vertical cu Sac</h3>
         </div>
         
-        <div class="img-container">
-            <img src="images/aspirator.jpg" alt="Aspirator Vertical" class="main-img">
-        </div>
+        <img src="images/aspirator.jpg" alt="Kenmore Intuition Verde" class="main-img">
         
-        <div class="details">
-            <p><strong>Recenzia mea:</strong> Super eficient pentru curățenia zilnică. Ușor de manevrat!</p>
-            <div class="video-placeholder">
-                 <p>Apasă pe card pentru detalii</p>
+        <div class="details" style="display: block !important; opacity: 1 !important;">
+            <p><strong>De ce îmi place:</strong> Este un monstru al curățeniei, cântărește doar 6.5 kg și are sistemul "Lift-Up" care te lasă să cureți scările super ușor.</p>
+            
+            <ul class="specs-list">
+                <li><strong>Tehnologie No Touch Bag:</strong> Apeși un buton și scapi de sac fără să atingi mizeria.</li>
+                <li><strong>Filtrare HEPA:</strong> Sistem complet etanș, ideal pentru cei cu alergii.</li>
+                <li><strong>PowerFlow:</strong> Aspiră la fel de tare chiar și când sacul e aproape plin.</li>
+                <li><strong>Faruri LED:</strong> Vezi tot praful de sub mobilă.</li>
+            </ul>
+
+            <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; font-size: 0.85rem; border-left: 4px solid #ff9900;">
+                <strong>Specificații:</strong> Electric cu fir | 2 motoare | 200W | HandiMate inclus.
             </div>
         </div>
 
-        <a href="https://amzn.to/4s7zncM" target="_blank" class="btn-amazon" onclick="event.stopPropagation();">
-            VEZI PE AMAZON
+        <a href="https://amzn.to/4s7zncM" target="_blank" class="btn-amazon">
+            VEZI PREȚUL PE AMAZON
         </a>
     </div>
 </div>
 
-<footer style="text-align: center; padding: 20px; color: #888; font-size: 0.8rem;">
-    <p>&copy; 2026 ReviewHub.ro</p>
+<footer style="text-align: center; padding: 30px; color: #888; font-size: 0.8rem;">
+    <p>&copy; 2026 ReviewHub.ro - Testăm ce e mai bun pe TikTok</p>
 </footer>
 
 </body>
