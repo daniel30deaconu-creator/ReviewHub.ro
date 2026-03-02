@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewHub.ro | Kenmore Intuition Review</title>
+    <title>ReviewHub.ro | Cele mai bune alegeri</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Adăugăm câteva stiluri extra pentru listă direct aici */
-        .specs-list { text-align: left; margin: 15px 0; font-size: 0.9rem; color: #444; }
-        .specs-list li { margin-bottom: 8px; list-style: none; display: flex; align-items: flex-start; }
-        .specs-list li::before { content: "✅"; margin-right: 10px; }
-        .tag { background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold; }
+        :root { --amazon: #FF9900; --kenmore-green: #2E7D32; }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 500px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .product-badge {
+            background: var(--kenmore-green);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .product-title { padding: 15px; font-size: 1.4rem; color: #333; margin: 0; }
+
+        .main-img { width: 100%; height: auto; display: block; border-bottom: 3px solid var(--kenmore-green); }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 15px;
+            background: #f9f9f9;
+            font-size: 0.85rem;
+        }
+
+        .spec-item { display: flex; align-items: center; gap: 5px; color: #555; }
+
+        .description { padding: 15px; line-height: 1.6; color: #444; font-size: 0.95rem; }
+
+        .btn-buy {
+            display: block;
+            background: var(--amazon);
+            color: black;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .btn-buy:hover { transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -18,43 +65,42 @@
 <nav>
     <a href="index.html" class="logo">ReviewHub<span>.ro</span></a>
     <div class="nav-links">
-        <a href="index.html">PRODUSE</a>
-        <a href="blog.html">BLOG TECH</a>
+        <a href="index.html">ACASĂ</a>
+        <a href="blog.html">BLOG</a>
     </div>
 </nav>
 
 <div class="container">
-    <div class="card">
-        <div class="card-header">
-            <span class="tag">RECOMANDAT PENTRU ANIMALE</span>
-            <h3>Kenmore Intuition - Aspirator Vertical cu Sac</h3>
-        </div>
+    
+    <div class="product-card">
+        <div class="product-badge">Top Recomandare: Animale & Covoare</div>
+        <h2 class="product-title">Kenmore Intuition Verde - Aspirator Vertical</h2>
         
-        <img src="images/aspirator.jpg" alt="Kenmore Intuition Verde" class="main-img">
-        
-        <div class="details" style="display: block !important; opacity: 1 !important;">
-            <p><strong>De ce îmi place:</strong> Este un monstru al curățeniei, cântărește doar 6.5 kg și are sistemul "Lift-Up" care te lasă să cureți scările super ușor.</p>
-            
-            <ul class="specs-list">
-                <li><strong>Tehnologie No Touch Bag:</strong> Apeși un buton și scapi de sac fără să atingi mizeria.</li>
-                <li><strong>Filtrare HEPA:</strong> Sistem complet etanș, ideal pentru cei cu alergii.</li>
-                <li><strong>PowerFlow:</strong> Aspiră la fel de tare chiar și când sacul e aproape plin.</li>
-                <li><strong>Faruri LED:</strong> Vezi tot praful de sub mobilă.</li>
-            </ul>
+        <img src="images/aspirator.jpg" alt="Kenmore Intuition" class="main-img">
 
-            <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; font-size: 0.85rem; border-left: 4px solid #ff9900;">
-                <strong>Specificații:</strong> Electric cu fir | 2 motoare | 200W | HandiMate inclus.
-            </div>
+        <div class="specs-grid">
+            <div class="spec-item">🔌 Electric cu fir</div>
+            <div class="spec-item">🛡️ Filtru HEPA</div>
+            <div class="spec-item">⚖️ Greutate: 6.5 kg</div>
+            <div class="spec-item">💡 Faruri LED</div>
+            <div class="spec-item">🌀 2 Motoare</div>
+            <div class="spec-item">🐕 HandiMate Animale</div>
         </div>
 
-        <a href="https://amzn.to/4s7zncM" target="_blank" class="btn-amazon">
-            VEZI PREȚUL PE AMAZON
+        <div class="description">
+            <p><strong>De ce să-l alegi:</strong> Sistemul <strong>Lift-Up</strong> îți permite să cureți scările fără efort, iar tehnologia <strong>No Touch Bag</strong> înseamnă că nu mai atingi niciodată praful când schimbi sacul.</p>
+            <p>Camera PowerFlow asigură o putere de aspirare constantă de 200W, chiar și când sacul e aproape plin!</p>
+        </div>
+
+        <a href="https://amzn.to/4s7zncM" target="_blank" class="btn-buy">
+            VEZI PREȚUL PE AMAZON 🛒
         </a>
     </div>
+
 </div>
 
-<footer style="text-align: center; padding: 30px; color: #888; font-size: 0.8rem;">
-    <p>&copy; 2026 ReviewHub.ro - Testăm ce e mai bun pe TikTok</p>
+<footer style="text-align: center; padding: 20px; color: #aaa;">
+    <p>&copy; 2026 ReviewHub.ro</p>
 </footer>
 
 </body>
