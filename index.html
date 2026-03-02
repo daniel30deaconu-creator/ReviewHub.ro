@@ -3,76 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReviewHub.ro | Kenmore Intuition Review</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ReviewHub.ro | Kenmore Intuition</title>
     <style>
-        body { background-color: #f8f9fa; font-family: 'Inter', sans-serif; margin: 0; }
-        .product-card {
-            background: white;
-            max-width: 550px;
-            margin: 30px auto;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            overflow: hidden;
-            border: 1px solid #eef0f2;
-        }
-        .badge { background: #2e7d32; color: white; padding: 8px 15px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; text-align: center; }
+        /* Design curat și rapid */
+        body { background-color: #f4f4f4; font-family: sans-serif; margin: 0; padding: 0; }
+        nav { background: #333; color: white; padding: 15px; text-align: center; font-weight: bold; }
+        .logo span { color: #ff9900; }
         
-        /* Stil pentru poze */
-        .main-img { width: 100%; height: auto; display: block; }
-        .secondary-img { 
-            width: 90%; 
-            margin: 10px auto; 
-            display: block; 
-            border-radius: 10px; 
+        .container { max-width: 600px; margin: 20px auto; padding: 10px; }
+        
+        .card { 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             border: 1px solid #ddd;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
-        .img-label { text-align: center; font-size: 0.8rem; color: #777; margin-bottom: 10px; font-style: italic; }
 
-        .content { padding: 25px; }
-        .product-title { font-size: 1.6rem; color: #1a1a1a; margin-bottom: 15px; line-height: 1.2; font-weight: 800; }
+        .header { background: #2e7d32; color: white; padding: 10px; text-align: center; text-transform: uppercase; font-size: 0.8rem; }
         
-        .specs-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 20px 0;
-            padding: 15px;
-            background: #f1f8f1;
-            border-radius: 12px;
-        }
-        .spec-item { font-size: 0.85rem; color: #3d5a80; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+        /* IMAGINEA 1 (Din folderul tău) */
+        .img-main { width: 100%; height: auto; display: block; border-bottom: 2px solid #eee; }
         
-        .description-text { font-size: 0.95rem; color: #4a4a4a; line-height: 1.6; margin-bottom: 25px; }
-        .description-text strong { color: #2e7d32; }
+        /* IMAGINEA 2 (De pe Amazon) */
+        .img-extra { width: 90%; margin: 15px auto; display: block; border-radius: 10px; border: 1px solid #eee; }
 
+        .content { padding: 20px; }
+        h1 { font-size: 1.4rem; color: #222; margin-top: 0; }
+        
+        .specs { background: #f9f9f9; padding: 15px; border-radius: 10px; margin: 15px 0; font-size: 0.9rem; line-height: 1.6; }
+        
+        /* BUTONUL CEREUT */
         .btn-amazon {
             display: block;
-            background: linear-gradient(90deg, #ff9900, #ffb347);
-            color: #232f3e;
+            background: #ff9900;
+            color: white;
             text-align: center;
-            padding: 18px;
+            padding: 15px;
             text-decoration: none;
-            font-weight: 800;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-transform: uppercase;
         }
-        .btn-amazon:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4); }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="logo">ReviewHub<span>.ro</span></a>
-    <div class="nav-links">
-        <a href="index.html">PRODUSE</a>
-        <a href="blog.html">BLOG TECH</a>
-    </div>
-</nav>
+<nav class="logo">ReviewHub<span>.ro</span></nav>
 
 <div class="container">
-    <div class="product-card">
-        <div class="badge">Review Complet: Kenmore Intu
+    <div class="card">
+        <div class="header">Recomandat pentru Animale & Covoare</div>
+        
+        <img src="images/aspirator.jpg" alt="Kenmore Intuition" class="img-main">
+
+        <div class="content">
+            <h1>Aspirator Vertical Kenmore Intuition</h1>
+            
+            <p><strong>Kenmore Intuition</strong> este un aspirator profesional cu 2 motoare, perfect pentru casele cu animale.</p>
+
+            <div class="specs">
+                ✅ <strong>No Touch Bag:</strong> Scapi de sac fără să atingi mizeria.<br>
+                ✅ <strong>Lift-Up:</strong> Se transformă în aspirator de mână.<br>
+                ✅ <strong>Filtru HEPA:</strong> Reține 99.97% din praf.<br>
+                ✅ <strong>Faruri LED:</strong> Vezi praful de sub mobilă.
+            </div>
+
+            <p style="text-align:center; font-size: 0.8rem; color: #666;">Accesorii incluse în pachet:</p>
+            <img src="https://m.media-amazon.com/images/I/81Tag31JMXL._AC_SL1000__.jpg" alt="Accesorii" class="img-extra">
+
+            <a href="https://amzn.to/4uadyvk" target="_blank" class="btn-amazon">
+                VEZI PE AMAZON
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 20px; color: #999; font-size: 0.8rem;">
+    &copy; 2026 ReviewHub.ro
+</footer>
+
+</body>
+</html>
