@@ -7,27 +7,30 @@
     var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
+      // INITIALIZARE PIXEL
       ttq.load('D6JBEGJC77U4M175809G');
 
-      // 1. EVENIMENT: PageView (Vizualizare Pagină)
+      // 1. EVENIMENT: PageView (Cu codul tău de test pentru API)
       ttq.page({
-        test_event_code: 'TEST23480' // Codul tău de test
+        test_event_code: 'TEST23480'
       });
 
-      // 2. EVENIMENT: ViewContent (Specific pentru produsul Kenmore)
+      // 2. EVENIMENT: ViewContent (Raportează vizualizarea produsului)
       ttq.track('ViewContent', {
         contents: [{
-          content_id: 'kenmore_bu4022',
-          content_type: 'product',
-          content_name: 'Kenmore Intuition'
+          content_id: 'kenmore_001',
+          content_name: 'kenmore_intuition',
+          content_type: 'product'
         }],
         test_event_code: 'TEST23480'
       });
 
-      // Funcție pentru al 3-lea eveniment (Click pe buton)
+      // 3. FUNCȚIE PENTRU EVENIMENTUL: ClickButton (Când apasă pe Amazon)
       function trackAmazonClick() {
         ttq.track('ClickButton', {
-          content_name: 'Amazon Redirect',
+          content_name: 'amazon_referral',
+          value: 0,
+          currency: 'USD',
           test_event_code: 'TEST23480'
         });
       }
@@ -37,7 +40,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReviewHub.ro | Kenmore Intuition</title>
     <style>
-        body { background-color: #f4f4f4; font-family: sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f4f4; font-family: sans-serif; margin: 0; }
         nav { background: #232f3e; color: white; padding: 15px; text-align: center; font-weight: bold; }
         nav span { color: #ff9900; }
         .container { max-width: 500px; margin: 20px auto; padding: 10px; }
@@ -51,12 +54,13 @@
             background: #ff9900;
             color: black;
             text-align: center;
-            padding: 15px;
+            padding: 18px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1.2rem;
             margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -66,12 +70,13 @@
 
 <div class="container">
     <div class="card">
-        <div class="header-tag">Recomandat pentru Animale</div>
+        <div class="header-tag">Recomandat pentru Animale & Covoare</div>
+        
         <img src="images/aspirator.jpg" alt="Kenmore Intuition" class="img-main">
 
         <div class="content">
-            <h1>Aspirator Vertical Kenmore Intuition</h1>
-            <p>Sistem Lift-Up și filtrare HEPA pentru o casă curată.</p>
+            <h1>Aspirator Kenmore Intuition</h1>
+            <p>Sistem Lift-Up și filtrare HEPA profesională.</p>
             
             <img src="https://m.media-amazon.com/images/I/81Tag31JMXL._AC_SL1000__.jpg" alt="Accesorii" class="img-extra">
 
