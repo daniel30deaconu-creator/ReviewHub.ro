@@ -7,28 +7,28 @@
     var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-      // INITIALIZARE PIXEL
+      // Inițializare Pixel
       ttq.load('D6JBEGJC77U4M175809G');
 
-      // 1. EVENIMENT: PageView (Cu codul tău de test pentru API)
+      // 1. EVENIMENT PAGEVIEW (Pentru cerința API)
       ttq.page({
         test_event_code: 'TEST23480'
       });
 
-      // 2. EVENIMENT: ViewContent (Raportează vizualizarea produsului)
+      // 2. EVENIMENT VIEWCONTENT (Cerința: minim 3 evenimente)
       ttq.track('ViewContent', {
         contents: [{
-          content_id: 'kenmore_001',
-          content_name: 'kenmore_intuition',
-          content_type: 'product'
+          content_id: 'kenmore_bu4022',
+          content_name: 'Kenmore Intuition Vacuum',
+          content_category: 'Home Appliances'
         }],
         test_event_code: 'TEST23480'
       });
 
-      // 3. FUNCȚIE PENTRU EVENIMENTUL: ClickButton (Când apasă pe Amazon)
+      // 3. FUNCȚIE PENTRU EVENIMENTUL CLICK (Cerința: sarcina utilă/payload)
       function trackAmazonClick() {
         ttq.track('ClickButton', {
-          content_name: 'amazon_referral',
+          content_name: 'Check Amazon Price',
           value: 0,
           currency: 'USD',
           test_event_code: 'TEST23480'
@@ -39,29 +39,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReviewHub.ro | Kenmore Intuition</title>
+    
     <style>
-        body { background-color: #f4f4f4; font-family: sans-serif; margin: 0; }
-        nav { background: #232f3e; color: white; padding: 15px; text-align: center; font-weight: bold; }
+        body { background-color: #f8f9fa; font-family: 'Inter', -apple-system, sans-serif; margin: 0; padding: 0; }
+        nav { background: #232f3e; color: white; padding: 15px; text-align: center; font-weight: bold; font-size: 1.2rem; }
         nav span { color: #ff9900; }
+        
         .container { max-width: 500px; margin: 20px auto; padding: 10px; }
-        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; }
-        .header-tag { background: #2e7d32; color: white; padding: 10px; text-align: center; font-size: 0.8rem; font-weight: bold; }
+        
+        .card { 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .badge { background: #2e7d32; color: white; padding: 10px; text-align: center; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        
         .img-main { width: 100%; height: auto; display: block; }
-        .img-extra { width: 90%; margin: 15px auto; display: block; border-radius: 10px; }
-        .content { padding: 20px; }
+        .img-amazon { width: 92%; margin: 15px auto; display: block; border-radius: 12px; border: 1px solid #eee; }
+
+        .content { padding: 25px; }
+        h1 { font-size: 1.5rem; color: #111; margin: 0 0 15px 0; }
+        
+        .specs { background: #f1f8f1; padding: 15px; border-radius: 12px; margin: 20px 0; }
+        .spec-item { margin-bottom: 10px; font-size: 0.95rem; color: #333; display: flex; align-items: center; gap: 10px; }
+        
         .btn-amazon {
             display: block;
-            background: #ff9900;
-            color: black;
+            background: linear-gradient(180deg, #ffb347 0%, #ff9900 100%);
+            color: #111;
             text-align: center;
             padding: 18px;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
+            font-weight: 800;
+            border-radius: 12px;
             font-size: 1.2rem;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 25px;
+            box-shadow: 0 4px 15px rgba(255,153,0,0.3);
+            border: 1px solid #e68a00;
         }
+        
+        footer { text-align: center; padding: 30px; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -70,15 +90,23 @@
 
 <div class="container">
     <div class="card">
-        <div class="header-tag">Recomandat pentru Animale & Covoare</div>
+        <div class="badge">Recomandarea TikTok: Kenmore Intuition</div>
         
         <img src="images/aspirator.jpg" alt="Kenmore Intuition" class="img-main">
 
         <div class="content">
-            <h1>Aspirator Kenmore Intuition</h1>
-            <p>Sistem Lift-Up și filtrare HEPA profesională.</p>
+            <h1>Aspirator Kenmore Intuition - Putere Maximă</h1>
             
-            <img src="https://m.media-amazon.com/images/I/81Tag31JMXL._AC_SL1000__.jpg" alt="Accesorii" class="img-extra">
+            <p style="color: #666; line-height: 1.6;">Designul Lift-Up și tehnologia No Touch Bag fac din acest aspirator alegerea nr. 1 pentru posesorii de animale.</p>
+
+            <div class="specs">
+                <div class="spec-item">✅ <b>No Touch Bag:</b> Goliți sacul fără praf.</div>
+                <div class="spec-item">✅ <b>Sistem Lift-Up:</b> Portabil pentru scări.</div>
+                <div class="spec-item">✅ <b>Filtrare HEPA:</b> Etanșare completă.</div>
+            </div>
+
+            <p style="text-align:center; font-size: 0.8rem; color: #999; margin-bottom: 5px;">Accesorii incluse în pachet:</p>
+            <img src="https://m.media-amazon.com/images/I/81Tag31JMXL._AC_SL1000__.jpg" alt="Accesorii Amazon" class="img-amazon">
 
             <a href="https://amzn.to/4uadyvk" target="_blank" class="btn-amazon" onclick="trackAmazonClick()">
                 VEZI PE AMAZON
@@ -86,6 +114,10 @@
         </div>
     </div>
 </div>
+
+<footer>
+    &copy; 2026 ReviewHub.ro | Link-uri de Afiliat
+</footer>
 
 </body>
 </html>
