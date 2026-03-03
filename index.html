@@ -8,34 +8,79 @@
     ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
       ttq.load('D6JBEGJC77U4M175809G');
-      
-      // CONFIGURARE TEST PIXEL
+
+      // 1. EVENIMENT: PageView (Vizualizare Pagină)
       ttq.page({
+        test_event_code: 'TEST23480' // Codul tău de test
+      });
+
+      // 2. EVENIMENT: ViewContent (Specific pentru produsul Kenmore)
+      ttq.track('ViewContent', {
+        contents: [{
+          content_id: 'kenmore_bu4022',
+          content_type: 'product',
+          content_name: 'Kenmore Intuition'
+        }],
         test_event_code: 'TEST23480'
       });
+
+      // Funcție pentru al 3-lea eveniment (Click pe buton)
+      function trackAmazonClick() {
+        ttq.track('ClickButton', {
+          content_name: 'Amazon Redirect',
+          test_event_code: 'TEST23480'
+        });
+      }
     }(window, document, 'ttq');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReviewHub.ro | Kenmore Intuition</title>
-    
     <style>
-        /* Design modern și curat */
-        body { background-color: #f0f2f5; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; color: #333; }
-        
-        nav { background: #232f3e; color: white; padding: 15px; text-align: center; font-size: 1.3rem; font-weight: bold; }
+        body { background-color: #f4f4f4; font-family: sans-serif; margin: 0; padding: 0; }
+        nav { background: #232f3e; color: white; padding: 15px; text-align: center; font-weight: bold; }
         nav span { color: #ff9900; }
-        
         .container { max-width: 500px; margin: 20px auto; padding: 10px; }
-        
-        .card { 
-            background: white; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+        .header-tag { background: #2e7d32; color: white; padding: 10px; text-align: center; font-size: 0.8rem; font-weight: bold; }
+        .img-main { width: 100%; height: auto; display: block; }
+        .img-extra { width: 90%; margin: 15px auto; display: block; border-radius: 10px; }
+        .content { padding: 20px; }
+        .btn-amazon {
+            display: block;
+            background: #ff9900;
+            color: black;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            margin-top: 20px;
         }
+    </style>
+</head>
+<body>
 
-        .promo-banner { background: #2e7d32; color: white; padding: 8px; text-align: center; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
-        
-        .
+<nav>ReviewHub<span>.ro</span></nav>
+
+<div class="container">
+    <div class="card">
+        <div class="header-tag">Recomandat pentru Animale</div>
+        <img src="images/aspirator.jpg" alt="Kenmore Intuition" class="img-main">
+
+        <div class="content">
+            <h1>Aspirator Vertical Kenmore Intuition</h1>
+            <p>Sistem Lift-Up și filtrare HEPA pentru o casă curată.</p>
+            
+            <img src="https://m.media-amazon.com/images/I/81Tag31JMXL._AC_SL1000__.jpg" alt="Accesorii" class="img-extra">
+
+            <a href="https://amzn.to/4uadyvk" target="_blank" class="btn-amazon" onclick="trackAmazonClick()">
+                VEZI PE AMAZON
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
